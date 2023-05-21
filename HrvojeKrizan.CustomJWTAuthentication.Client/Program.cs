@@ -33,11 +33,8 @@ namespace HrvojeKrizan.CustomJWTAuthentication.Client
                 options.AddPolicy("SpecialPermissions", policy => policy.RequireClaim("ApplicationClaim", "SpecialPermissions"));
             });
 
-            //builder.Services.AddScoped<AuthenticationStateProvider, ApplicationAuthenticationStateProvider>();
-
             builder.Services.AddScoped<ApplicationAuthenticationStateProvider>();
             builder.Services.AddScoped<AuthenticationStateProvider>(provider => provider.GetRequiredService<ApplicationAuthenticationStateProvider>());
-
 
             await builder.Build().RunAsync();
         }
