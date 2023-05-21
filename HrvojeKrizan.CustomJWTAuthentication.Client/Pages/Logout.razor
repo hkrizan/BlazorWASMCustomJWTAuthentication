@@ -1,0 +1,13 @@
+﻿@page "/logout"
+@inject ApplicationAuthenticationService _http
+@inject NavigationManager _navigationManager
+
+<text>Logging out...</text>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await _http.LogoutUser();
+        _navigationManager.NavigateTo("login");
+    }
+}

@@ -1,0 +1,89 @@
+﻿@page "/login"
+@inject ApplicationAuthenticationService _http
+@inject NavigationManager _navigationManager
+
+<PageTitle>Login</PageTitle>
+
+<h1>Login</h1>
+
+<EditForm Model="@_loginRequest" OnValidSubmit="@HandleValidSubmit" >
+    <DataAnnotationsValidator />
+    <CustomValidation @ref="_customValidation" />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <InputText class="form-control" id="Email" @bind-Value="_loginRequest.Email" placeholder="Email" />
+    </div>
+
+    <div class="mb-3">
+        <InputText class="form-control" id="Password" @bind-Value="_loginRequest.Password" placeholder="Password" />
+    </div>
+
+    @if (!_loggingIn)
+    {
+        <button class="btn btn-primary" type="submit">Login</button>
+    }
+    else
+    {
+        <p>
+            Logging in...
+        </p>
+    }
+
+</EditForm>
+
+@code {
+    LoginUserDTO _loginRequest = new();
+    CustomValidation? _customValidation;
+    bool _loggingIn;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    async void HandleValidSubmit()
+    {
+        if(_loggingIn)
+        {
+            return;
+        }
+
+        List<string> errorMessages = new List<string>();
+
+        _loggingIn = true;
+
+        LoginUserResultDTO? result = null;
+        try
+        {
+            result = await _http.LoginUser(_loginRequest);
+
+            if (result.Succeeded)
+            {
+                _navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                errorMessages.Add(result.Message);
+            }
+        }
+        catch(Exception ex)
+        {
+            errorMessages.Add(ex.Message);
+        }
+        finally
+        {
+
+            if (errorMessages.Count > 0)
+            {
+                _customValidation?.ClearErrors();
+                var errors = new Dictionary<string, List<string>>();
+                errors.Add("", errorMessages);
+                _customValidation?.DisplayErrors(errors);
+            }
+
+            _loggingIn = false;
+            StateHasChanged();
+        }
+    }
+}

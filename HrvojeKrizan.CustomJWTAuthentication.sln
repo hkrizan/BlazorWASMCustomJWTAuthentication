@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrvojeKrizan.CustomJWTAuthentication.Client", "HrvojeKrizan.CustomJWTAuthentication.Client\HrvojeKrizan.CustomJWTAuthentication.Client.csproj", "{D4AD5AC3-39C9-4F71-BDD6-5E91AC025356}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrvojeKrizan.CustomJWTAuthentication.Shared", "HrvojeKrizan.CustomJWTAuthentication.Shared\HrvojeKrizan.CustomJWTAuthentication.Shared.csproj", "{6A915EFA-FB29-4FBA-8434-3257CEAA0309}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrvojeKrizan.CustomJWTAuthentication.Server", "HrvojeKrizan.CustomJWTAuthentication.Server\HrvojeKrizan.CustomJWTAuthentication.Server.csproj", "{FBC9E38B-49B1-42D7-A65A-C05BA1A7A499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrvojeKrizan.CustomJWTAuthentication.Data", "HrvojeKrizan.CustomJWTAuthentication.Data\HrvojeKrizan.CustomJWTAuthentication.Data.csproj", "{EDADA1E2-8839-4B7E-B994-B6BAED36F5AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4AD5AC3-39C9-4F71-BDD6-5E91AC025356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AD5AC3-39C9-4F71-BDD6-5E91AC025356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AD5AC3-39C9-4F71-BDD6-5E91AC025356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AD5AC3-39C9-4F71-BDD6-5E91AC025356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A915EFA-FB29-4FBA-8434-3257CEAA0309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A915EFA-FB29-4FBA-8434-3257CEAA0309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A915EFA-FB29-4FBA-8434-3257CEAA0309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A915EFA-FB29-4FBA-8434-3257CEAA0309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC9E38B-49B1-42D7-A65A-C05BA1A7A499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC9E38B-49B1-42D7-A65A-C05BA1A7A499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC9E38B-49B1-42D7-A65A-C05BA1A7A499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC9E38B-49B1-42D7-A65A-C05BA1A7A499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDADA1E2-8839-4B7E-B994-B6BAED36F5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDADA1E2-8839-4B7E-B994-B6BAED36F5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDADA1E2-8839-4B7E-B994-B6BAED36F5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDADA1E2-8839-4B7E-B994-B6BAED36F5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3D03F99-6C76-4258-82B1-5AE8713C9E04}
+	EndGlobalSection
+EndGlobal
