@@ -1,4 +1,4 @@
-using HrvojeKrizan.CustomJWTAuthentication.Server.Constants;
+using HrvojeKrizan.CustomJWTAuthentication.Shared.Constants;
 using HrvojeKrizan.CustomJWTAuthentication.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

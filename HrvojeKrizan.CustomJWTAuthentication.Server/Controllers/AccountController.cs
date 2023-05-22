@@ -1,6 +1,6 @@
 ﻿using HrvojeKrizan.CustomJWTAuthentication.Data.Models;
-using HrvojeKrizan.CustomJWTAuthentication.Server.Constants;
 using HrvojeKrizan.CustomJWTAuthentication.Server.Services;
+using HrvojeKrizan.CustomJWTAuthentication.Shared.Constants;
 using HrvojeKrizan.CustomJWTAuthentication.Shared.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

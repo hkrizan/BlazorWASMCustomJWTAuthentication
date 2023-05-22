@@ -1,6 +1,6 @@
 ﻿using HrvojeKrizan.CustomJWTAuthentication.Data;
 using HrvojeKrizan.CustomJWTAuthentication.Data.Models;
-using HrvojeKrizan.CustomJWTAuthentication.Server.Constants;
+using HrvojeKrizan.CustomJWTAuthentication.Shared.Constants;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
@@ -92,9 +92,9 @@ namespace HrvojeKrizan.CustomJWTAuthentication.Server.Controllers
 
                     await _userManager.AddToRoleAsync(regularUser, UserRoles.User);
 
-                    await _roleManager.AddClaimAsync(adminRole, new System.Security.Claims.Claim("ApplicationClaim", RoleClaims.SuperAdmin));
+                    await _roleManager.AddClaimAsync(adminRole, new System.Security.Claims.Claim(RoleClaims.ApplicationClaimType, RoleClaims.SuperAdmin));
 
-                    await _roleManager.AddClaimAsync(userRole, new System.Security.Claims.Claim("ApplicationClaim", RoleClaims.SpecialPermissions));
+                    await _roleManager.AddClaimAsync(userRole, new System.Security.Claims.Claim(RoleClaims.ApplicationClaimType, RoleClaims.SpecialPermissions));
 
                     return Ok("Created");
                 }

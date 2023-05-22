@@ -15,18 +15,18 @@ Welcome to your new app.
     </NotAuthorized>
 </AuthorizeView>
 
-<AuthorizeView Roles="Admin">
-    <p>This is visible by "Admin" role only</p>
+<AuthorizeView Roles="@UserRoles.Admin">
+    <p>This is visible by "@UserRoles.Admin" role only</p>
 </AuthorizeView>
 
-<AuthorizeView Roles="User">
-    <p>This is visible by "User" role only</p>
+<AuthorizeView Roles="@UserRoles.User">
+    <p>This is visible by "@UserRoles.User" role only</p>
 </AuthorizeView>
 
-<AuthorizeView Policy="SuperAdmin">
-    <p>This is visible if role or user has "SuperAdmin" claim</p>
+<AuthorizeView Policy="c">
+    <p>This is visible if role or user has "@RoleClaims.SuperAdmin" claim</p>
 </AuthorizeView>
 
-<AuthorizeView Policy="SpecialPermissions">
-    <p>This is visible if role or user has "SpecialPermissions" claim</p>
+<AuthorizeView Policy="@RoleClaims.SpecialPermissions">
+    <p>This is visible if role or user has "@RoleClaims.SpecialPermissions" claim</p>
 </AuthorizeView>

@@ -1,4 +1,4 @@
-﻿namespace HrvojeKrizan.CustomJWTAuthentication.Server.Constants
+﻿namespace HrvojeKrizan.CustomJWTAuthentication.Shared.Constants
 {
     public static class UserRoles
     {
