@@ -23,7 +23,7 @@ Welcome to your new app.
     <p>This is visible by "@UserRoles.User" role only</p>
 </AuthorizeView>
 
-<AuthorizeView Policy="c">
+<AuthorizeView Policy="@RoleClaims.SuperAdmin">
     <p>This is visible if role or user has "@RoleClaims.SuperAdmin" claim</p>
 </AuthorizeView>
 
