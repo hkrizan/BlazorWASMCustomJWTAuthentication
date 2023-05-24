@@ -21,10 +21,15 @@ namespace HrvojeKrizan.CustomJWTAuthentication.Client
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddHttpClient<ApplicationAuthenticationService>(client =>
-                client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+            {
+                client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+            });
 
             builder.Services.AddHttpClient<ApiService>(client =>
-                client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+            {
+                client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+            })
+            .AddHttpMessageHandler<AuthorizationHttpMessageHandler>(); //adds authorization headers for HttpClient instance in ApiService
 
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddAuthorizationCore(options =>
